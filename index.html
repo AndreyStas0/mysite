@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Legends Showdown</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>CS2 Legends Showdown</h1>
+    <h2>Кіберспортивний турнір найкращих команд світу</h2>
+
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="schedule.html">Розклад</a></li>
+            <li><a href="participants.html">Учасники</a></li>
+            <li><a href="tickets.html">Купити квиток</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+    </nav>
+</header>
+
+    
+
+    <main>
+
+        <section class="about">
+            <div class="content">
+                <img src="images/about.jpg" alt="Про турнір" class="block-image">
+                <div class="text">
+                    <h2>Про турнір</h2>
+                    <p>CS2 Legends Showdown — це грандіозна подія у світі кіберспорту, яка об'єднує легендарні команди з усього світу в захоплюючій битві за титул чемпіона. Турнір відбудеться на новітній арені, обладнаній за останнім словом техніки, з професійними коментаторами та аналітиками.</p>
+                    <p>Глядачів чекає неповторна атмосфера, видовищні матчі та шанс побачити гру найкращих гравців CS2. Приєднуйтесь до нас і станьте частиною історії кіберспорту!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="content">
+                <img src="images/history.jpg" alt="Історія турніру" class="block-image">
+                <div class="text">
+                    <h2>Історія турніру</h2>
+                    <p>CS2 Legends Showdown бере свій початок з 2023 року і вже став одним із найочікуваніших турнірів у спільноті Counter-Strike. Минулого року у фіналі зійшлися команди NAVI та G2 Esports, де NAVI здобули переконливу перемогу.</p>
+                    <p>Щороку турнір збирає найсильніших гравців планети, демонструючи не лише їхній високий рівень гри, а й силу командного духу та стратегічного мислення. Цього року нас чекає ще більше сюрпризів!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="matches">
+            <h2>Найближчі матчі</h2>
+          
+            <div class="match">
+              <div class="team-left">
+                <img src="images/navi_logo.png" alt="NAVI" class="team-logo">
+                <span>NAVI</span>
+              </div>
+              
+              <div class="vs">VS</div>
+              
+              <div class="team-right">
+                <span>Spirit</span>
+                <img src="images/spirit_logo.png" alt="Spirit" class="team-logo">
+              </div>
+            </div>
+          
+            <div class="match">
+              <div class="team-left">
+                <img src="images/vp_logo.png" alt="Virtus.Pro" class="team-logo">
+                <span>Virtus.Pro</span>
+              </div>
+              
+              <div class="vs">VS</div>
+              
+              <div class="team-right">
+                <span>Vitality</span>
+                <img src="images/vitality_logo.png" alt="Vitality" class="team-logo">
+              </div>
+            </div>
+          
+          </div>
+          
+
+    </main>
+
+    <footer>
+        &copy; 2025 CS2 Legends Showdown. Всі права захищено.
+    </footer>
+    <script>
+      function toggleMenu() {
+          document.querySelector(".nav-menu").classList.toggle("active");
+      }
+    </script>
+  
+</body>
+</html>
