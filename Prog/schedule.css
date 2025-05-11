@@ -1,0 +1,200 @@
+/* Загальні стилі для всього сайту */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+
+    background-image: 
+      linear-gradient(rgba(0, 51, 102, 0.98), rgba(0, 51, 102, 0.96)),
+      url("images/background.jpg");
+
+    background-color: #001f3f;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Стилі для заголовку */
+header {
+    background-color: rgba(0, 0, 80, 0.9);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    font-weight: 700;
+}
+
+header h2 {
+    color: #aaccff;
+    font-size: 20px;
+    margin: 10px 0 0;
+    font-weight: 400;
+}
+
+/* Навігація */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #aaccff;
+    cursor: pointer;
+    margin-top: 15px; /* Відступ під заголовком */
+}
+nav {
+    margin-top: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+}
+.nav-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.nav-menu li {
+    margin: 10px 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #aaccff;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #003366;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Головна частина */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Блок з матчами */
+.matches {
+    background-color: rgba(0, 0, 51, 0.7);
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.matches h2 {
+    color: #3399ff;
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: -3px;
+}
+
+.time {
+    color: #cccccc;
+    font-size: 1em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.match:hover {
+    transform: scale(1.02);
+}
+
+.team-left,
+.team-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+.team-logo {
+    width: 60px;
+    height: auto;
+}
+
+.vs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 80, 0.9);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .matches {
+        width: 90%;
+    }
+
+    .team-logo {
+        width: 40px;
+    }
+
+    .vs {
+        position: static;
+        transform: none;
+    }
+
+    .burger-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 80, 0.9);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}

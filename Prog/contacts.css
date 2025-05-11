@@ -1,0 +1,79 @@
+.contacts-section {
+    background-color: rgba(0, 0, 51, 0.7);
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+    width: 70%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.contacts-section h2 {
+    color: #3399ff;
+    font-size: 2em;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contact-block {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    flex: 1 1 40%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.contact-block:hover {
+    transform: scale(1.05);
+}
+
+.contact-block h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-block p {
+    color: #aaccff;
+    font-size: 1.1em;
+}
+
+.contact-block a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-block a:hover {
+    color: #3399ff;
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+    .contacts-section {
+        width: 80%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-block {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contacts-section {
+        width: 90%;
+    }
+}

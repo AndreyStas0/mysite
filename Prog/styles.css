@@ -1,0 +1,246 @@
+/* Загальні стилі для всього сайту */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+
+    background-image: 
+      linear-gradient(rgba(0, 51, 102, 0.98), rgba(0, 51, 102, 0.96)),
+      url("images/background.jpg");
+
+    background-color: #001f3f;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Стилі для заголовку */
+header {
+    background-color: rgba(0, 0, 80, 0.9);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    font-weight: 700;
+}
+
+header h2 {
+    color: #aaccff;
+    font-size: 20px;
+    margin: 10px 0 0;
+    font-weight: 400; /* Менш жирний */
+}
+
+/* Навігація */
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #aaccff;
+    cursor: pointer;
+    margin-top: 15px; /* Відступ під заголовком */
+}
+nav {
+    margin-top: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+}
+.nav-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.nav-menu li {
+    margin: 10px 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #aaccff;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #003366;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Головна частина */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Блоки "Про турнір" та "Історія турніру" */
+.about,
+.history {
+    background-color: rgba(0, 0, 51, 0.7);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.about .content,
+.history .content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.block-image {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+    width: 50%;
+    color: #ffffff;
+}
+
+.text h2 {
+    font-size: 2em;
+    color: #3399ff;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Блок з матчами */
+.matches {
+    background-color: rgba(0, 0, 51, 0.7);
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    width: 80%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.matches h2 {
+    color: #3399ff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.match:hover {
+    transform: scale(1.02);
+}
+
+.team-left,
+.team-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+.team-logo {
+    width: 50px;
+    height: auto;
+}
+
+.vs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 80, 0.9);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .about,
+    .history,
+    .matches {
+        width: 90%;
+    }
+
+    .about .content,
+    .history .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .block-image,
+    .text {
+        width: 100%;
+    }
+
+    .team-logo {
+        width: 40px;
+    }
+
+    .vs {
+        transform: none;
+    }
+
+    .burger-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 80, 0.9);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
